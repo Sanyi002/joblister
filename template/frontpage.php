@@ -17,13 +17,13 @@
         </div>
 
         <div class="container">
+            <h3><?php echo $title ?></h3>
             <div class="row">
-                <h3><?php echo $title ?></h3>
                 <?php foreach($jobs as $job): ?>
                     <div class="col-md-12">
                         <h2><?php echo $job->job_title ?></h2>
                         <p><?php echo $job->description ?></p>
-                        <p><a class="btn btn-secondary" href="job.php?id=<?php echo $job->id;?>" role="button">View details &raquo;</a></p>
+                        <p><a class="btn btn-outline-primary btn-sm" href="job.php?id=<?php echo $job->id;?>" role="button">View details &raquo;</a></p>
                     </div>
                 <?php endforeach; ?>
             </div>

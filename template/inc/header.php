@@ -30,3 +30,8 @@
         </div>
     </div>
 </nav>
+<div class="info-bar">
+    <div class="container">
+        <?php displayMessage(); ?>
+    </div>
+</div>

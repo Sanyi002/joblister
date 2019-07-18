@@ -1,5 +1,5 @@
 <?php
-class Database {
+class Database extends PDO{
     private $host = DB_HOST;
     private $user = DB_USER;
     private $pass = DB_PASS;
@@ -9,8 +9,8 @@ class Database {
     private $error;
     private $stmt;
 
-    private function __construct(){
-        $dsn = 'mysql:host='.$this->host.';db_name='.$this->dbname;
+    public function __construct(){
+        $dsn = "mysql:dbname={$this->dbname};host={$this->host}";
 
         $options = array(
             PDO::ATTR_PERSISTENT => true,
@@ -21,6 +21,7 @@ class Database {
             $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
         } catch(PDOException $e) {
             $this->error = $e->getMessage();
+            echo 'Communication failed: '.$this->error." <br> ".$e;
         }
     }
 

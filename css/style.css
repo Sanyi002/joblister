@@ -1,0 +1,16 @@
+.jumbotron .form-control {
+	border-width: 4px;
+}
+
+.jumbotron .form-control:focus {
+	box-shadow: none;
+	border-color: black;
+}
+
+.jumbotron form input {
+	margin-top: 20px;
+}
+
+.job-wrapper .btn-goback {
+	margin: 15px 0 30px;
+}

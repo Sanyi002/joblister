@@ -17,7 +17,8 @@
         </div>
 
         <div class="container">
-            <h3><?php echo $title ?></h3>
+            <div class="info-bar"><?php displayMessage(); ?></div>
+            <h1 class="page-header"><?php echo $title ?></h1>
             <div class="row">
                 <?php foreach($jobs as $job): ?>
                     <div class="col-md-12">
